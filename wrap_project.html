@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: WRAP Communication System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <a href="index.html" class="text-blue-500 font-semibold hover:underline">&larr; Back to Portfolio</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="project-details">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Wireless RF & Analog Communication System</h1>
+            <p class="text-xl text-gray-600 mb-8">An end-to-end project to design, build, and test a 27MHz wireless communication system from the ground up.</p>
+
+            
+            <img src="images/rf_system_diagram.png" alt="RF Communication System Block Diagram" class="w-full rounded-lg shadow-md mb-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+                    <p class="mb-4">
+                        The Wireless, RF, and Analog Project (WRAP) is a comprehensive undertaking to build a complete digital communication system without wires. The core goal is to successfully transmit a string of bits from one microcontroller to another over a 27MHz radio frequency link.
+                    </p>
+                    <p>
+                        This project covers the entire signal chain, from writing the embedded code that encodes digital data into an analog waveform, to designing and building the physical transmitter and receiver hardware, and finally, decoding the analog signal back into an error-free digital format.
+                    </p>
+
+                    <h2 class="text-2xl font-bold mt-8 mb-4">Learning Objectives & Key Challenges</h2>
+                    <p class="mb-4">
+                        A primary challenge will be the **design of the analog RF front-end**. This requires creating a series of sensitive circuits, including RF amplifiers, mixers, and filters, from discrete components. Success depends on careful component selection and achieving stable biasing for all active elements like transistors.
+                    </p>
+                    <p class="mb-4">
+                        Another key challenge is **maintaining signal integrity**. At 27MHz, factors like impedance matching and minimizing noise become critical. This will involve applying transmission line theory to design matching networks and implementing a thoughtful PCB layout to prevent signal degradation and interference between stages.
+                    </p>
+                     <p>
+                        Finally, the **digital communications aspect** presents its own hurdles. The task involves developing a robust modulation and encoding scheme in embedded C to ensure that the data can be reliably recovered by the receiver, even in the presence of noise.
+                    </p>
+
+                    <h2 class="text-2xl font-bold mt-8 mb-4">Anticipated Outcome & Skills Gained</h2>
+                    <p>
+                        The final outcome of this project will be a functional pair of custom-built transmitter and receiver boards capable of wireless data transmission. Through this process, I expect to gain deep, hands-on experience in the entire lifecycle of an RF system. Key skills will include circuit simulation in **LTSpice**, PCB layout with **Autodesk Eagle**, firmware development in **Embedded C**, and practical use of RF bench equipment like vector network analyzers and spectrum analyzers for testing and validation.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md h-fit">
+                    <h3 class="text-xl font-semibold mb-4 border-b pb-2">Technical Details</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Languages:</strong> Embedded C, MATLAB</li>
+                        <li><strong>Tools:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li>LTSpice</li>
+                                <li>Autodesk Eagle</li>
+                                <li>STM CubeIDE</li>
+                                <li>RF Test Equipment</li>
+                            </ul>
+                        </li>
+                        <li><strong>Key Concepts:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li>RF System Design</li>
+                                <li>Amplifiers & Mixers</li>
+                                <li>Filter Design</li>
+                                <li>Impedance Matching</li>
+                                <li>PCB Layout</li>
+                                <li>Digital Signal Processing</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="mt-8 text-center">
+                        <a href="https://docs.ieeebruins.com/WRAP/Overview" target="_blank"
+                           class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 inline-block w-full">
+                           View Project Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white mt-12 border-t">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-600">
+            &copy; 2025 Dyllan Goldstein
+        </div>
+    </footer>
+
+</body>
+</html>
