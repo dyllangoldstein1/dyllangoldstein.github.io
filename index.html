@@ -14,7 +14,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-10">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-gray-900">Dyllan Goldstein</div>
@@ -25,63 +24,95 @@
                 <a href="#resume" class="text-gray-600 hover:text-blue-500">Resume</a>
                 <a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a>
             </div>
-            <!-- Mobile Menu Button (optional) -->
-        </nav>
+            </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-6 py-12">
 
-        <!-- About Section -->
         <section id="about" class="text-center py-16">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Dyllan Goldstein</h1>
             <p class="text-xl text-gray-600 mb-8">Electrical Engineering Student | Passionate about embedded systems and robotics.</p>
             <p class="max-w-3xl mx-auto">A brief introduction about yourself. Talk about your interests, what you're passionate about in EE, and your career goals. Keep it concise and engaging.</p>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-16 bg-gray-100 rounded-lg">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1: Flight Optimization -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                        <!-- Replace this with the image you added -->
-                        <img src="Flight Project Screenshot.png" alt="Flight Optimization Project" class="w-full h-48 object-cover">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+
+                                        <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="wrap image.png" alt="WRAP Communication System Diagram" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Flight Optimization Algorithm</h3>
-                            <p class="text-gray-700 mb-4">A C++ Program that can do the heavy lifting of planning a trip for you, while you sit back, enjoy your coffee, and watch the algorithm go to work at creating your itenerary. </p>
-                            <!-- THIS IS THE LINK -->
-                            <a href="flight_optimization.html" class="text-blue-500 font-semibold hover:underline">View Details &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Project 2: WRAP -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                        <!-- Replace this with the image you added -->
-                        <img src="wrap image.png" alt="wrap image" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Wireless, RF, Analog Project (In Progress)</h3>
-                            <p class="text-gray-700 mb-4">An end-to-end project to design, build, and test a wireless communication system from the ground up.
-                                This involves creating the analog RF transmitter and receiver PCBs for a 27MHz link and developing the embedded C code for digital signal encoding and decoding.
-                            </p>
-                            <!-- THIS IS THE LINK -->
+                            <h3 class="text-xl font-bold mb-2">Wireless RF & Analog Project <span class="text-sm font-medium text-green-500 align-middle bg-green-100 px-2 py-1 rounded-full">In Progress</span></h3>
+                            <p class="text-gray-700 mb-4">An end-to-end project to build a wireless communication system, from analog RF circuit design to digital signal processing in embedded C.</p>
                             <a href="wrap_project.html" class="text-blue-500 font-semibold hover:underline">View Details &rarr;</a>
                         </div>
                     </div>
-                    <!-- Project 3 -->
+
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Project+Image" alt="Project 3" class="w-full h-48 object-cover">
+                        <img src="images/ucla_rocket.png" alt="UCLA Rocket Project" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Project Title 3</h3>
-                            <p class="text-gray-700 mb-4">A short description of your project. Explain the problem it solves and the technologies you used.</p>
-                            <a href="#" class="text-blue-500 font-semibold hover:underline">View on GitHub &rarr;</a>
+                            <h3 class="text-xl font-bold mb-2">Prometheus Rocket Project @ UCLA<span class="text-sm font-medium text-blue-500 align-middle bg-blue-100 px-2 py-1 rounded-full">Active Member</span></h3>
+                            <p class="text-gray-700 mb-4">Joining a team to design, build, and launch a liquid-propellant rocket. I aim to contribute to the avionics sub-team, focusing on flight control systems.</p>
+                            <a href="https://www.uclarocketproject.com/" target="_blank" class="text-blue-500 font-semibold hover:underline">View Official Site &rarr;</a>
                         </div>
                     </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="images/underwater_robot.png" alt="Underwater Autonomous Vehicle" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Bruin Underwater Robotics <span class="text-sm font-medium text-blue-500 align-middle bg-blue-100 px-2 py-1 rounded-full">Active Member</span></h3>
+                            <p class="text-gray-700 mb-4">Joined the electrical sub-team to design and build an Autonomous Underwater Vehicle (AUV), focusing on power distribution and microcontroller integration.</p>
+                            <a href="http://www.bruinunderwaterrobotics.com/" target="_blank" class="text-blue-500 font-semibold hover:underline">View Official Site &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="Flight Project Screenshot.png" alt="Flight Optimization Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Flight Optimization Algorithm</h3>
+                        <p class="text-gray-700 mb-4">A C++ program that can do the heavy lifting of planning a trip for you, while you sit back and watch the algorithm go to work.</p>
+                        <a href="flight_optimization.html" class="text-blue-500 font-semibold hover:underline">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="music arduino image.png" alt="Arduino Music Player Circuit" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">"iPoduino" Music Player</h3>
+                            <p class="text-gray-700 mb-4">Simulates an analog voltage with PWM by alternating between HIGH and LOW rapidly on an Arduino Nano to play songs. Mine was programmed to play Fur Elise!</p>
+                            <a href="arduino_music_player.html" class="text-blue-500 font-semibold hover:underline">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="images/arduino_sensor.png" alt="Arduino with an ultrasonic sensor" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Arduino Ultrasonic Sensor</h3>
+                            <p class="text-gray-700 mb-4">Developed an interactive device using an Arduino and an ultrasonic sensor to measure distances, providing real-time feedback via LEDs.</p>
+                            <a href="arduino_sensor.html" class="text-blue-500 font-semibold hover:underline">View Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="images/high_school_rocket.png" alt="Model Rocket Launch" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Early Explorations: Model Rocketry</h3>
+                            <p class="text-gray-700 mb-4">A high school project that ignited my passion for engineering, exploring principles of aerodynamics, stability, and propulsion through hands-on design.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="py-16">
             <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
             <div class="max-w-4xl mx-auto">
@@ -102,14 +133,12 @@
             </div>
         </section>
 
-        <!-- Resume Section -->
         <section id="resume" class="py-16 bg-gray-100 rounded-lg text-center">
             <h2 class="text-3xl font-bold mb-4">My Resume</h2>
             <p class="text-gray-600 mb-8">Find more details about my experience and qualifications.</p>
             <a href="#" class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Download Resume (PDF)</a>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-16 text-center">
             <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
             <p class="text-lg mb-4">I'm always open to discussing new projects, creative ideas, or opportunities.</p>
@@ -117,13 +146,11 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-white mt-12 border-t">
         <div class="container mx-auto px-6 py-6 text-center text-gray-600">
-            &copy; 2025 Your Name. All rights reserved.
+            &copy; 2025 Dyllan Goldstein. All rights reserved.
         </div>
     </footer>
 
 </body>
 </html>
-
