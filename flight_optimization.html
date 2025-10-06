@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Flight Optimization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <a href="index.html" class="text-blue-500 font-semibold hover:underline">&larr; Back to Portfolio</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="project-details">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Flight Optimization Algorithm</h1>
+            <p class="text-xl text-gray-600 mb-8">Calculating the most efficient flight paths using Python and weather data.</p>
+
+            <img src="https://placehold.co/1200x600/e2e8f0/334155?text=Flight+Path+Visualization" alt="Flight Path Visualization" class="w-full rounded-lg shadow-md mb-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+                    <p class="mb-4">
+                        This project focused on developing an algorithm to determine the optimal flight path for a commercial aircraft between two airports. The primary goal was to minimize fuel consumption by considering factors like wind speed, altitude, and aircraft performance characteristics. I developed a script in Python that models the flight and calculates the total fuel burn for various potential routes.
+                    </p>
+                    <p>
+                        This was a challenging project that combined my interests in aviation with my skills in programming and data analysis.
+                    </p>
+
+                    <h2 class="text-2xl font-bold mt-8 mb-4">Challenges & Solutions</h2>
+                    <p class="mb-4">
+                        One of the main challenges was accurately modeling the effect of wind on the aircraft's ground speed and fuel consumption. To solve this, I integrated real-world weather data from a public API. I wrote functions to parse this data and apply vector arithmetic to calculate the true airspeed required to maintain a given ground track, which directly impacted the fuel burn calculations.
+                    </p>
+
+                    <h2 class="text-2xl font-bold mt-8 mb-4">Outcome & What I Learned</h2>
+                    <p>
+                        The final algorithm successfully identified more efficient routes compared to a direct great-circle path, with potential fuel savings of 3-5% depending on the weather conditions. Through this project, I gained valuable experience in algorithmic problem-solving, working with external APIs, and data visualization using Matplotlib to plot the flight paths and fuel usage.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md h-fit">
+                    <h3 class="text-xl font-semibold mb-4 border-b pb-2">Technical Details</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Language:</strong> Python</li>
+                        <li><strong>Libraries:</strong> NumPy, Matplotlib, Requests</li>
+                        <li><strong>Key Concepts:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li>Algorithm Design</li>
+                                <li>Data Parsing (JSON)</li>
+                                <li>Vector Analysis</li>
+                                <li>API Integration</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12 border-t">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-600">
+            &copy; 2025 Your Name. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
