@@ -26,42 +26,53 @@
 
         <section id="project-details">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Flight Optimization Algorithm</h1>
-            <p class="text-xl text-gray-600 mb-8">Calculating the most efficient flight paths using Python and weather data.</p>
+            <p class="text-xl text-gray-600 mb-8">Calculating the most efficient flight paths using C++ and real-world data.</p>
 
-            <img src="https://placehold.co/1200x600/e2e8f0/334155?text=Flight+Path+Visualization" alt="Flight Path Visualization" class="w-full rounded-lg shadow-md mb-12">
+            <img src="Flight Project Screenshot.png" alt="Flight Path Visualization" class="w-full rounded-lg shadow-md mb-12">
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="md:col-span-2">
                     <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
                     <p class="mb-4">
-                        This project focused on developing an algorithm to determine the optimal flight path for a commercial aircraft between two airports. The primary goal was to minimize fuel consumption by considering factors like wind speed, altitude, and aircraft performance characteristics. I developed a script in Python that models the flight and calculates the total fuel burn for various potential routes.
+                        This project focused on developing a trust algorithm-powered travel agent that could do the heavy lifting to develop the perfect itenerary. 
                     </p>
                     <p>
-                        This was a challenging project that combined my interests in aviation with my skills in programming and data analysis.
+                        This was a challenging project that put my programming skills to the test as my program had to not only piece understand flight schedules,
+                        but piece together an efficient route avoiding long layovers and missed connections.
                     </p>
 
                     <h2 class="text-2xl font-bold mt-8 mb-4">Challenges & Solutions</h2>
                     <p class="mb-4">
-                        One of the main challenges was accurately modeling the effect of wind on the aircraft's ground speed and fuel consumption. To solve this, I integrated real-world weather data from a public API. I wrote functions to parse this data and apply vector arithmetic to calculate the true airspeed required to maintain a given ground track, which directly impacted the fuel burn calculations.
+                        The first main challenge was managing the massive flight dataset efficiently.
+                        Using a naive search for connecting flights would be far too slow. To solve this, I designed the FlightManager
+                        class to pre-process the data, then storing it in a hash map where each airport code mapped to a Binary 
+                        Search Tree I developed containting its outbound flights, sorted by departure time. The result was incredibly fast lookups with an
+                        average Big O of O(log F), where F is the number of flights from an airport. This was key to improving the performance of the pathfinding algorithm.
                     </p>
-
+                    <p>
+                        Another significant hurdle I tackeled was the issue that a simple search algorithm like Breadth-First Search was insufficient for the task at hand, as it finds the route with the fewest flights,
+                        not the shortest total travel time. I'd argue that, a two-flight trip with a 10-hour layover is going to be a much bigger headache than a three-flight trip with two 1-hour layovers. To find the truly optimal route,
+                        I opted to use an A* search algorithm. I used a priority queue to explore various itineraries with priority based on the actual time already traveled, plus the time needed to get to the destination.
+                        This implementation allowed for the search to analyze the most promising routes first.
+                    </p>
                     <h2 class="text-2xl font-bold mt-8 mb-4">Outcome & What I Learned</h2>
                     <p>
-                        The final algorithm successfully identified more efficient routes compared to a direct great-circle path, with potential fuel savings of 3-5% depending on the weather conditions. Through this project, I gained valuable experience in algorithmic problem-solving, working with external APIs, and data visualization using Matplotlib to plot the flight paths and fuel usage.
+                        The final algorithm successfully generated optimal flight itineraries from a database of thousands of real-world flights, dealing with constraints like minimum connection times and maximum layovers. Through this project, 
+                        I gained practical experience in designing and implementing complex algorithms like A*. I also honed my skills in C++ data structures by building a Binary Search Tree from scratch and applying my knowledge to solve a tangible,
+                         real-world logistics problem.
+
                     </p>
                 </div>
                 
                 <div class="bg-white p-6 rounded-lg shadow-md h-fit">
                     <h3 class="text-xl font-semibold mb-4 border-b pb-2">Technical Details</h3>
                     <ul class="space-y-3 text-gray-700">
-                        <li><strong>Language:</strong> Python</li>
-                        <li><strong>Libraries:</strong> NumPy, Matplotlib, Requests</li>
+                        <li><strong>Language:</strong> C++</li>
                         <li><strong>Key Concepts:</strong>
                             <ul class="list-disc list-inside ml-4 mt-1">
-                                <li>Algorithm Design</li>
-                                <li>Data Parsing (JSON)</li>
-                                <li>Vector Analysis</li>
-                                <li>API Integration</li>
+                                <li>Binary Search Tree</li>
+                                <li>A* Algorithm</li>
+                                <li>Time Complexity Analysis</li>
                             </ul>
                         </li>
                     </ul>
@@ -74,7 +85,7 @@
     <!-- Footer -->
     <footer class="bg-white mt-12 border-t">
         <div class="container mx-auto px-6 py-6 text-center text-gray-600">
-            &copy; 2025 Your Name. All rights reserved.
+            &copy; 2025 Dyllan Goldstein
         </div>
     </footer>
 
