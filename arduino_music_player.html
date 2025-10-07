@@ -24,39 +24,41 @@
 
         <section id="project-details">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Arduino 'iPoduino' Music Player</h1>
-            <p class="text-xl text-gray-600 mb-8">A hands-on project building a music player with programmable songs, a potentiometer interface, and a custom LED display.</p>
+            <p class="text-xl text-gray-600 mb-8">A fun project building a music player with programmable songs.</p>
 
             
-            <img src="images/ipoduino_circuit.png" alt="Arduino Music Player on a Breadboard" class="w-full rounded-lg shadow-md mb-12">
+            <video controls loop playsinline class="w-full rounded-lg shadow-md mb-12">
+                <source src="ipoduino.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="md:col-span-2">
                     <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
                     <p class="mb-4">
-                        This project involved building a standalone music player, nicknamed the "iPoduino," on a breadboard using an Arduino Nano. The device integrates three distinct subsystems: an audio output system that plays programmed melodies through a speaker, a user interface using a potentiometer to select one of three songs, and a custom-designed visual display using LEDs to provide feedback on the current song selection.
+                        This project had me building a music player, nicknamed the "iPoduino," on a breadboard using an Arduino Nano. The device integrated a small speaker which would use Pulse Width Modulation to play songs.
                     </p>
                     <p>
-                        The goal was to gain practical experience with core electrical engineering concepts by managing digital and analog signals to create a functional, interactive device.
+                        The goal was to gain practical experience in singals by simulating an analog signal sent to the speaker through quickly transitioning between HIGH and LOW digital outputs.
                     </p>
 
                     <h2 class="text-2xl font-bold mt-8 mb-4">Core Concepts & Implementation</h2>
                     <p class="mb-4">
-                        The central concept of this project is **Pulse Width Modulation (PWM)**. Since the Arduino cannot produce a true analog signal, PWM is used to simulate one. This technique was fundamental to multiple subsystems:
+                        The main concept of this project is Pulse Width Modulation (PWM). Since the Arduino cannot produce a true analog signal, PWM is used to simulate one swtiching rapidly between a HIGH and LOW digital output.
                         <ul class="list-disc list-inside ml-4 mt-2">
-                            <li><strong>Audio Generation:</strong> The `tone()` function was used to generate square waves of specific frequencies, which the speaker translates into audible musical notes. The duration of each note was controlled by programming delays between `tone()` and `noTone()` calls.</li>
-                            <li><strong>Visual Display:</strong> PWM was also used to control the brightness of the LEDs in the display, allowing for more dynamic feedback than simply turning them on or off.</li>
+                            <li><strong>Audio Generation:</strong> The "tone()" function was used to generate square waves of a specified frequencies, which the speaker could then translate into audible notes. The duration of each note was controlled by programming delays between tone functions.</li>
                         </ul>
                     </p>
                     <p>
-                        A significant challenge was the **system integration** of the different hardware components. The final program reads an analog voltage from the potentiometer's wiper, maps that voltage value to a specific song, updates the LED display to reflect the choice, and then plays the correct sequence of notes through the speaker upon a reset-button press. This required careful code organization, including creating separate functions for each song.
+                        The challenge for this project laid in figuring out the necessary frequency and duration of square waves to produce a given musical note.
                     </p>
 
                     <h2 class="text-2xl font-bold mt-8 mb-4">Final Outcome & Skills Demonstrated</h2>
                     <p>
-                        The result is a fully functional, breadboard-based music player. The user can turn the potentiometer dial to select a song, see their selection confirmed on the LED display, and press the Arduino's reset button to play the chosen melody.
+                        The result was a fully functional, breadboard-based music player.
                     </p>
                     <p class="mt-4">
-                        This project successfully demonstrates a practical understanding of **Arduino programming (C/C++)**, analog and digital I/O, implementing **PWM** for audio and visual outputs, reading sensor data via **Analog-to-Digital Conversion (ADC)**, and building and debugging a multi-component circuit.
+                        This project successfully demonstrates a practical understanding of Arduino programming (C/C++), analog and digital I/O, and implementing PWM for audio.
                     </p>
                 </div>
                 
@@ -67,27 +69,16 @@
                         <li><strong>Key Components:</strong>
                             <ul class="list-disc list-inside ml-4 mt-1">
                                 <li>Arduino Nano</li>
-                                <li>8Ω Speaker</li>
-                                <li>Potentiometer</li>
-                                <li>LEDs & Resistors</li>
+                                <li>Speaker</li>
                             </ul>
                         </li>
                         <li><strong>Key Concepts:</strong>
                             <ul class="list-disc list-inside ml-4 mt-1">
                                 <li>Pulse Width Modulation (PWM)</li>
-                                <li>Analog-to-Digital Conversion</li>
-                                <li>Digital I/O</li>
-                                <li>Using Header Libraries</li>
                                 <li>Circuit Prototyping</li>
                             </ul>
                         </li>
                     </ul>
-                    <div class="mt-8 text-center">
-                        <a href="https://ops.ieeebruins.com/docs/ops-2/5-digital-analog-pwm/" target="_blank"
-                           class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 inline-block w-full">
-                           View Original Project Guide
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
