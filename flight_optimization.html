@@ -46,11 +46,11 @@
                         The first main challenge was managing the massive flight dataset efficiently.
                         Using a naive search for connecting flights would be far too slow. To solve this, I designed the FlightManager
                         class to pre-process the data, then storing it in a hash map where each airport code mapped to a Binary 
-                        Search Tree I developed containting its outbound flights, sorted by departure time. The result was incredibly fast lookups with an
+                        Search Tree I developed containing its outbound flights, sorted by departure time. The result was incredibly fast lookups with an
                         average Big O of O(log F), where F is the number of flights from an airport. This was key to improving the performance of the pathfinding algorithm.
                     </p>
                     <p>
-                        Another significant hurdle I tackeled was the issue that a simple search algorithm like Breadth-First Search was insufficient for the task at hand, as it finds the route with the fewest flights,
+                        Another significant hurdle I tackled was the issue that a simple search algorithm like Breadth-First Search was insufficient for the task at hand, as it finds the route with the fewest flights,
                         not the shortest total travel time. I'd argue that, a two-flight trip with a 10-hour layover is going to be a much bigger headache than a three-flight trip with two 1-hour layovers. To find the truly optimal route,
                         I opted to use an A* search algorithm. I used a priority queue to explore various itineraries with priority based on the actual time already traveled, plus the time needed to get to the destination.
                         This implementation allowed for the search to analyze the most promising routes first.
