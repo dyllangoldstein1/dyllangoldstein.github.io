@@ -26,7 +26,7 @@
 
         <section id="project-details">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Line-Following Robot</h1>
-            <p class="text-xl text-gray-600 mb-8">An autonomous robot designed and programmed to navigate a course by following a black line on a white surface.</p>
+            <p class="text-xl text-gray-600 mb-8">An autonomous robot programmed to navigate a course by following a black line on a white surface.</p>
 
             <!-- Replace with a photo of your completed robot -->
             <img src="images/line_follower_robot.png" alt="Line-Following Robot on a course" class="w-full rounded-lg shadow-md mb-12">
@@ -35,25 +35,28 @@
                 <div class="md-col-span-2">
                     <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
                     <p class="mb-4">
-                        This project is a classic introduction to robotics and control systems, focused on building a vehicle that can autonomously navigate a pre-defined path. The robot's objective is to detect a contrasting line on the ground and adjust its motors in real-time to stay on course, demonstrating a closed-loop feedback system in action.
+                        This project had the goal of programming a vehicle that could autonomously navigate a random path with pre-defined challenges. The robot used IR sensors located on its underside to detect a black-line and decision making algorithms programmed in to address challenges such as split or lost paths.
                     </p>
                     <p>
-                        The challenge lies in integrating the sensors, microcontroller, and motors into a cohesive system that can respond quickly and accurately to changes in the path.
+                        Having to ensure the robot reacted to obstacles with varying demands posed a great challenge with some requiring sharp turns while others required avoiding an overcorrection. This was overcome with a weighting scheme and path recovery algorithm. The weighting scheme ensured that when encountering two potential
+                        paths, the robot would prioritize the path to its left side. This implementation was reveresed when returning.
+
+                        Additionally, a path recovery algorithm was crucial to accomplishing "jumps" where the line stopped and moved to the side. This way when the robot would lose sight of the track with would slowly drift until it once again found the line. From there PID controls took over and ensured the robot stayed on course.
                     </p>
 
                     <h2 class="text-2xl font-bold mt-8 mb-4">Core Concepts & Implementation</h2>
                     <p class="mb-4">
                         The robot's functionality is based on three key subsystems:
                         <ul class="list-disc list-inside ml-4 mt-2 space-y-2">
-                            <li><strong>Sensor Array:</strong> An array of infrared (IR) LED and phototransistor pairs is used to detect the line. The white surface reflects IR light, while the black line absorbs it. By reading the analog values from the phototransistors, the microcontroller can determine the position of the line relative to the robot's chassis.</li>
-                            <li><strong>Motor Control:</strong> A dual H-bridge motor driver (like the L298N) allows the microcontroller to precisely control the speed and direction of the two DC motors. By varying the Pulse Width Modulation (PWM) signal sent to each motor, the robot can execute sharp turns, gradual curves, or move straight.</li>
-                            <li><strong>Control Logic:</strong> The core of the project is the control algorithm. A simple implementation uses conditional logic (if-else statements) to adjust the motors based on which sensors detect the line. For more advanced performance, a Proportional-Integral-Derivative (PID) control algorithm can be implemented to create much smoother and faster navigation by minimizing the error between the robot's position and the line.</li>
+                            <li><strong>Sensor Array:</strong> An array of infrared (IR) sensors used to detect the line. The white surface reflects IR light, while the black line absorbs it. Using analog values from the phototransistors, robot could determine its position relative to the line.</li>
+                            <li><strong>Motor Control:</strong> A motor driver allows the microcontroller to precisely control the speed and direction of the two DC motors connected to the wheels. By varying the Pulse Width Modulation (PWM) signal sent to each motor, the robot was able to accomplish sharp turns, gradual curves, or move straight.</li>
+                            <li><strong>Control Logic:</strong> The core of the project was the implementation of conditional logic, weighting schemes, and Proportional-Integral-Derivative (PID) controls to create a smooth and fast navigation.</li>
                         </ul>
                     </p>
                     
                     <h2 class="text-2xl font-bold mt-8 mb-4">Anticipated Outcome & Skills Gained</h2>
                     <p>
-                        The final outcome will be a fully autonomous robot capable of navigating a complex track with curves and intersections. This project will provide hands-on experience in microcontroller programming (C/C++), circuit design and prototyping, and the practical application of control system theory. It serves as a strong demonstration of integrating hardware and software to solve a real-world automation task.
+                        The final outcome was a fully autonomous robot capable of navigating a complex track with curves and intersections. The project provided hands-on experience in microcontroller programming and control system theory.
                     </p>
                 </div>
                 
@@ -63,20 +66,17 @@
                         <li><strong>Platform:</strong> Arduino (C/C++)</li>
                         <li><strong>Key Components:</strong>
                             <ul class="list-disc list-inside ml-4 mt-1">
-                                <li>Arduino Nano/Uno</li>
-                                <li>IR Sensor Array (e.g., QTR-8A)</li>
-                                <li>L298N Motor Driver</li>
-                                <li>DC Geared Motors</li>
-                                <li>Robot Chassis</li>
+                                <li>IR Sensor Array</li>
+                                <li>DC Motors</li>
+                                <li>TI Robot Chassis</li>
                             </ul>
                         </li>
                         <li><strong>Key Concepts:</strong>
                             <ul class="list-disc list-inside ml-4 mt-1">
                                 <li>Control Systems (PID)</li>
                                 <li>Pulse Width Modulation (PWM)</li>
-                                <li>Analog-to-Digital Conversion</li>
                                 <li>Sensor Integration</li>
-                                <li>Embedded Systems</li>
+                                <li>Arduino</li>
                             </ul>
                         </li>
                     </ul>
@@ -89,7 +89,7 @@
     <!-- Footer -->
     <footer class="bg-white mt-12 border-t">
         <div class="container mx-auto px-6 py-6 text-center text-gray-600">
-            &copy; 2025 Dyllan Goldstein. All rights reserved.
+            &copy; 2025 Dyllan Goldstein.
         </div>
     </footer>
 
