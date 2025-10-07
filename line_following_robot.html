@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Line-Following Robot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <a href="index.html" class="text-blue-500 font-semibold hover:underline">&larr; Back to Portfolio</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="project-details">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Line-Following Robot</h1>
+            <p class="text-xl text-gray-600 mb-8">An autonomous robot designed and programmed to navigate a course by following a black line on a white surface.</p>
+
+            <!-- Replace with a photo of your completed robot -->
+            <img src="images/line_follower_robot.png" alt="Line-Following Robot on a course" class="w-full rounded-lg shadow-md mb-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md-col-span-2">
+                    <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+                    <p class="mb-4">
+                        This project is a classic introduction to robotics and control systems, focused on building a vehicle that can autonomously navigate a pre-defined path. The robot's objective is to detect a contrasting line on the ground and adjust its motors in real-time to stay on course, demonstrating a closed-loop feedback system in action.
+                    </p>
+                    <p>
+                        The challenge lies in integrating the sensors, microcontroller, and motors into a cohesive system that can respond quickly and accurately to changes in the path.
+                    </p>
+
+                    <h2 class="text-2xl font-bold mt-8 mb-4">Core Concepts & Implementation</h2>
+                    <p class="mb-4">
+                        The robot's functionality is based on three key subsystems:
+                        <ul class="list-disc list-inside ml-4 mt-2 space-y-2">
+                            <li><strong>Sensor Array:</strong> An array of infrared (IR) LED and phototransistor pairs is used to detect the line. The white surface reflects IR light, while the black line absorbs it. By reading the analog values from the phototransistors, the microcontroller can determine the position of the line relative to the robot's chassis.</li>
+                            <li><strong>Motor Control:</strong> A dual H-bridge motor driver (like the L298N) allows the microcontroller to precisely control the speed and direction of the two DC motors. By varying the Pulse Width Modulation (PWM) signal sent to each motor, the robot can execute sharp turns, gradual curves, or move straight.</li>
+                            <li><strong>Control Logic:</strong> The core of the project is the control algorithm. A simple implementation uses conditional logic (if-else statements) to adjust the motors based on which sensors detect the line. For more advanced performance, a Proportional-Integral-Derivative (PID) control algorithm can be implemented to create much smoother and faster navigation by minimizing the error between the robot's position and the line.</li>
+                        </ul>
+                    </p>
+                    
+                    <h2 class="text-2xl font-bold mt-8 mb-4">Anticipated Outcome & Skills Gained</h2>
+                    <p>
+                        The final outcome will be a fully autonomous robot capable of navigating a complex track with curves and intersections. This project will provide hands-on experience in microcontroller programming (C/C++), circuit design and prototyping, and the practical application of control system theory. It serves as a strong demonstration of integrating hardware and software to solve a real-world automation task.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md h-fit">
+                    <h3 class="text-xl font-semibold mb-4 border-b pb-2">Technical Details</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Platform:</strong> Arduino (C/C++)</li>
+                        <li><strong>Key Components:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li>Arduino Nano/Uno</li>
+                                <li>IR Sensor Array (e.g., QTR-8A)</li>
+                                <li>L298N Motor Driver</li>
+                                <li>DC Geared Motors</li>
+                                <li>Robot Chassis</li>
+                            </ul>
+                        </li>
+                        <li><strong>Key Concepts:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li>Control Systems (PID)</li>
+                                <li>Pulse Width Modulation (PWM)</li>
+                                <li>Analog-to-Digital Conversion</li>
+                                <li>Sensor Integration</li>
+                                <li>Embedded Systems</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12 border-t">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-600">
+            &copy; 2025 Dyllan Goldstein. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
+
